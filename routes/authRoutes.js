@@ -34,6 +34,7 @@ router.route('/signup').post((req, res) => {
     );
 });
 router.route('/login').post((req, res) => {
+    
     User.findOne({ email: req.body.email }).then(
         (user) => {
             if (!user) {
